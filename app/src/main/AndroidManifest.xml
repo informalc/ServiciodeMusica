@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AceptacionCondiciones">
         <activity
+            android:name=".Menores"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -2,4 +2,5 @@
     <string name="app_name">AceptacionCondiciones</string>
     <string name="menores">Lo siento. Es menor de edad. No está permitido el acceso a menores de edad.</string>
     <string name="condiciones">Condiciones aceptadas</string>
+    <string name="btnVerificar">Verificar</string>
 </resources>

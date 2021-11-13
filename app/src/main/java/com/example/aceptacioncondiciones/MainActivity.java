@@ -1,7 +1,9 @@
 package com.example.aceptacioncondiciones;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -27,10 +29,18 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Introduce edad válida", Toast.LENGTH_LONG).show();
             } else if(Integer.parseInt(edad.getText().toString()) > 17){
                 // Llamar Activity 2
-                Toast.makeText(MainActivity.this, "+18", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "+18", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(MainActivity.this, condiciones.class);
+                //i.putExtra("txtNombre", nombre.getText().toString());
+                //i.putExtra("txtEdad", this.edad.getText().toString());
+                //startActivityForResult(i, 80);
+                startActivity(i);
             } else{
                 // Llamar Activiy Menores
-                Toast.makeText(MainActivity.this, "-18", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "-18", Toast.LENGTH_LONG).show();
+                Intent i = new Intent(this, Menores.class);
+                i.putExtra("txtNombre", nombre.getText().toString());
+                startActivity(i);
             }
         }else if(nombre.getText().length() == 0 && edad.getText().length() == 0){ // Nombre y Edad están vacíos
             Toast.makeText(MainActivity.this, "Campos vacíos", Toast.LENGTH_LONG).show();
